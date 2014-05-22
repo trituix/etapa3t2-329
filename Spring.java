@@ -93,4 +93,9 @@ public class Spring extends PhysicsElement {
       String s = getAendPosition() + "\t" + getBendPosition();
       return s;
    }
+
+   public void dragTo(double x)
+   {
+
+   }
 }

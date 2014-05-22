@@ -19,8 +19,14 @@ public class LabMenuListener implements ActionListener {
          double radius = 0.1;    // 10 [cm] 
          double position = 0.0;  // 1 [m] 
          double speed = 0.5;     // 0.5 [m/s]
-         Ball b0 = new Ball(mass, radius, position, speed);
-         Ball b1 = new Ball(mass, radius, 2.0, 0);
+         Ball b0 = new Ball(mass, radius, 0.5, 0);
+         Ball b1 = new Ball(mass, radius, 1.5, 0);
+         FixedHook f0 = new FixedHook(0, 0.2);
+         Spring s0 = new Spring(1.5, 0.5);
+         s0.attachAend(f0);
+         s0.attachBend(b0);
+         world.addElement(f0);
+         world.addElement(s0);
          world.addElement(b0);
          world.addElement(b1);
       }
